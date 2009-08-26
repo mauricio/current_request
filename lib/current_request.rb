@@ -15,6 +15,7 @@ module CurrentRequest
 
     def _unset_current_request
       Thread.current[:_current_request] = nil
+      true
     end
 
   end
