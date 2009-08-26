@@ -1,0 +1,2 @@
+
+require 'current_request'

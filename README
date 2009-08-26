@@ -1,0 +1,17 @@
+current_request - maurício DOT linhares AT gmail DOT com
+====
+
+This plugin sets the current Rails request object in a Thread local variable
+so you can use it in places where the controller (and thus the request) are not
+directly available.
+
+The most common case for this are the e-mail templates, where sometimes you need
+to render a link but you don't have access to the current request to add the
+host. With this plugin you'll have the request at the e-mail templates and
+will be able to find out the current host to add a link to it:
+
+<%= link_to 'Home', "#{current_request.protocol}#{current_request.host_with_port}/home" %>
+
+Or you can just use a shorthand to the current host:
+
+<%= link_to 'Home', "#{current_host}/home" %>
