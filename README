@@ -15,3 +15,12 @@ will be able to find out the current host to add a link to it:
 Or you can just use a shorthand to the current host:
 
 <%= link_to 'Home', "#{current_host}/home" %>
+
+You can also use it wherever you want to access the current request
+(and not only on templates) by calling:
+
+  CurrentRequest::Holder.current_request
+
+You can install the plugin by calling:
+
+ruby script/plugin install git://github.com/mauricio/current_request.git
