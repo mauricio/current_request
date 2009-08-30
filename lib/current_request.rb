@@ -30,7 +30,7 @@ module CurrentRequest
 
 end
 
-ApplicationController.class_eval do
+ActionController::Base.class_eval do
   include CurrentRequest
 end
 
